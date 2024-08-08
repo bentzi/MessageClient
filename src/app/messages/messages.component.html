@@ -1,0 +1,17 @@
+<div class="messages-container">
+  <h2>Messages</h2>
+  <div class="messages-list">
+    <div class="message" *ngFor="let message of messages">
+      <p class="message-text">{{ message.text }}</p>
+      <span class="message-date">{{ message.date | date:'short' }}</span>
+      <span class="message-sender">Sent by: {{ message.userId }}</span>
+    </div>
+  </div>
+  <div class="message-form">
+    <input [(ngModel)]="newMessage" placeholder="Enter a message" class="message-input" />
+    <button (click)="addMessage()" class="message-button">Add Message</button>
+  </div>
+  <div class="navigation">
+    <button (click)="goToLogin()" class="navigation-button">Go to Login</button>
+  </div>
+</div>

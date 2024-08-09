@@ -1,0 +1,83 @@
+# Angular generated files
+/node_modules
+/dist
+/tmp
+/out-tsc
+/aot
+/build
+
+# Compiled output
+*.js
+*.js.map
+*.css
+*.css.map
+*.html
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and Editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+
+# Operating system files
+Thumbs.db
+Desktop.ini
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Compiled Typescript
+*.js
+*.tsbuildinfo
+*.d.ts
+
+# Environment files
+src/environments/*.ts
+
+# Coverage reports
+coverage/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Angular Cache
+.angular/cache
+
+# Temporary and lock files
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# Output directories
+/dist/
+/build/
+/coverage/
+/www/
+/tmp/
+
+# Angular analytics data
+angular.json
+
+# System Files
+.DS_Store
+Thumbs.db

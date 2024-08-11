@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import * as crypto from 'crypto-js';
-import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment'; 
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'https://localhost:7061/api';
+  private apiUrl = environment.apiUrl;  
 
   constructor(private http: HttpClient) { }
 
@@ -39,7 +39,7 @@ export class DataService {
 
   addMessage(text: string): Observable<any> {
     const userId = localStorage.getItem('userId');
-    const timestamp = Date.now();  // Get current timestamp
+    const timestamp = Date.now();  
     const hmacSignature = this.generateHmacSignature(text, userId!, timestamp);
     const headers = new HttpHeaders()
       .set('UserId', userId!)

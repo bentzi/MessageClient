@@ -15,8 +15,7 @@ export class MessagesComponent implements OnInit {
   constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
-    this.userId = localStorage.getItem('userId') || '';  // Retrieve user ID from local storage
-    console.log('User ID on init:', this.userId);  // Debugging line
+    this.userId = localStorage.getItem('userId') || '';
 
     if (this.userId) {
       this.dataService.getMessages().subscribe(messages => {

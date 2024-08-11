@@ -15,8 +15,6 @@ export class LoginComponent {
   login() {
     this.dataService.login(this.userId).subscribe(
       response => {
-        console.log('Login successful', response);
-        localStorage.setItem('token', response.token);
         localStorage.setItem('userId', this.userId);
         this.router.navigate(['/messages']);
       },
